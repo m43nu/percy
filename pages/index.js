@@ -55,13 +55,14 @@ export default function Home() {
                         name="weight"
                         value={weight}
                         onChange={event => setWeight(event.target.value)}
+                        inputmode="decimal"
                     />
                 </form>
             </div>
 
             <div className={styles.grid}>
                 <div className={styles.card}>
-                    <Input id="customPercentage" placeholder="Custom" type="number" width="4rem"
+                    <Input id="customPercentage" placeholder="Custom" type="number" width="4rem" inputmode="decimal"
                            min={1} max={100} step={1} name="customPercentage" value={customPercentage}
                            onChange={event => setCustomPercentage(event.target.value)}/>
                     <h3>{customPercentage ? roundHalf(weight / 100 * customPercentage) : '-'}</h3>

@@ -72,6 +72,7 @@ export default function Steps() {
                         name="weight"
                         value={weight}
                         onChange={event => setWeight(event.target.value)}
+                        inputmode="decimal"
                     />
                     <Grid.Container gap={2} justify="center" css={{paddingBottom: 0}}>
                         <Grid xs={4}>
@@ -86,17 +87,18 @@ export default function Steps() {
                                 name="steps"
                                 value={steps}
                                 onChange={event => setSteps(event.target.value)}
+                                inputmode="decimal"
                             />
                         </Grid>
                         <Grid xs={4}>
                             <Input id="startPercentage" label="Start %" type="number" bordered color="default"
                                    min={1} max={100} step={1} name="startPercentage" value={start} width="100%"
-                                   onChange={event => setStart(event.target.value)}/>
+                                   onChange={event => setStart(event.target.value)} inputmode="decimal"/>
                         </Grid>
                         <Grid xs={4}>
                             <Input id="endPercentage" label="End %" type="number" bordered color="default"
                                    min={1} max={100} step={1} name="endPercentage" value={end} width="100%"
-                                   onChange={event => setEnd(event.target.value)}/>
+                                   onChange={event => setEnd(event.target.value)} inputmode="decimal"/>
                         </Grid>
                     </Grid.Container>
                 </form>

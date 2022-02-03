@@ -78,7 +78,7 @@ export default function Home() {
                                                                        key={percentage}/>)}
 
                     <div className={styles.card}>
-                        <Input id="customPercentage" placeholder="Custom" type="number"
+                        <Input id="customPercentage" placeholder="Custom" type="number" width="4rem"
                                min={1} max={100} step={1} name="customPercentage" value={customPercentage}
                                onChange={event => setCustomPercentage(event.target.value)} />
                         <h4>{customPercentage ? parseInt(weight / 100 * customPercentage) : '-'}</h4>

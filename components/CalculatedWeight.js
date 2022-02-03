@@ -1,9 +1,6 @@
 import React from 'react'
 import styles from '../styles/Home.module.css';
-
-function roundHalf(num) {
-    return Math.round(num*2)/2;
-}
+import roundHalf from "../lib/round-half";
 
 const CalculatedWeight = ({percentage, weight}) => {
     return (

@@ -22,11 +22,15 @@ function useWeightState(defaultValue, key) {
     return [value, setValue];
 }
 
+function roundHalf(num) {
+    return Math.round(num*2)/2;
+}
+
 export default function Home() {
     let [weight, setWeight] = useWeightState(0, 'currentWeight')
-    let [customPercentage, setCustomPercentage] = useWeightState(45, 'customPercentage')
+    let [customPercentage, setCustomPercentage] = useWeightState(100, 'customPercentage')
 
-    const percentages = Array.from({length: 11}, (_, i) => 100 - (i * 5))
+    const percentages = Array.from({length: 11}, (_, i) => 95 - (i * 5))
 
     const updateWeight = event => {
         event.preventDefault()
@@ -89,15 +93,14 @@ export default function Home() {
                 </div>
 
                 <div className={styles.grid}>
-                    {percentages.map((percentage) => <CalculatedWeight percentage={percentage} weight={weight}
-                                                                       key={percentage}/>)}
-
                     <div className={styles.card}>
                         <Input id="customPercentage" placeholder="Custom" type="number" width="4rem"
                                min={1} max={100} step={1} name="customPercentage" value={customPercentage}
                                onChange={event => setCustomPercentage(event.target.value)}/>
-                        <h3>{customPercentage ? parseInt(weight / 100 * customPercentage) : '-'}</h3>
+                        <h3>{customPercentage ? roundHalf(weight / 100 * customPercentage) : '-'}</h3>
                     </div>
+                    {percentages.map((percentage) => <CalculatedWeight percentage={percentage} weight={weight}
+                                                                       key={percentage}/>)}
                 </div>
             </main>
 

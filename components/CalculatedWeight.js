@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css';
 const CalculatedWeight = ({percentage, weight}) => {
     return (
         <div className={styles.card}>
-            <h3>{percentage}%</h3>
-            <h4>{weight ? parseInt(weight/100 * percentage) : '-'}</h4>
+            <h2>{percentage}%</h2>
+            <h3>{weight ? parseInt(weight/100 * percentage) : '-'}</h3>
         </div>
     );
 }

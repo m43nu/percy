@@ -71,8 +71,6 @@ export default function Home() {
                     </form>
                 </div>
 
-                <h2>Percentages</h2>
-
                 <div className={styles.grid}>
                     {percentages.map((percentage) => <CalculatedWeight percentage={percentage} weight={weight}
                                                                        key={percentage}/>)}
@@ -81,7 +79,7 @@ export default function Home() {
                         <Input id="customPercentage" placeholder="Custom" type="number" width="4rem"
                                min={1} max={100} step={1} name="customPercentage" value={customPercentage}
                                onChange={event => setCustomPercentage(event.target.value)} />
-                        <h4>{customPercentage ? parseInt(weight / 100 * customPercentage) : '-'}</h4>
+                        <h3>{customPercentage ? parseInt(weight / 100 * customPercentage) : '-'}</h3>
                     </div>
                 </div>
             </main>

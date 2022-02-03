@@ -110,7 +110,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Mady by{' '}
+                    Made by{' '}
                     Emanuel Imhof
                 </a>
             </footer>

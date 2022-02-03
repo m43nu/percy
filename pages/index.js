@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css'
-import {Text, Input, Link, Grid} from "@nextui-org/react";
+import {Text, Input, Button, Grid} from "@nextui-org/react";
 import CalculatedWeight from "../components/CalculatedWeight";
 import React from "react";
 import NextLink from 'next/link';
@@ -26,15 +26,15 @@ export default function Home() {
                 </Text>
             </h1>
             <Text css={{marginBottom: '1rem'}}>Percentage Calculator</Text>
-            <Grid.Container gap={2} justify="center" css={{paddingTop: 0}}>
+            <Grid.Container gap={1} justify="center" css={{paddingTop: 0}}>
                 <Grid>
                     <NextLink href="/">
-                        <Link color="primary" underline>Percentages</Link>
+                        <Button color="gradient" auto>Percentages</Button>
                     </NextLink>
                 </Grid>
                 <Grid>
                     <NextLink href="/steps">
-                        <Link css={{color: '$Gray100'}}>Steps</Link>
+                        <Button bordered color="gradient" auto>Steps</Button>
                     </NextLink>
                 </Grid>
             </Grid.Container>

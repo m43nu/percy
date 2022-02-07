@@ -105,7 +105,7 @@ export default function Steps() {
             </div>
 
             <div className={styles.grid}>
-                {calculateSteps().map((percentage) => <CalculatedWeight percentage={percentage} weight={weight} key={percentage} />)}
+                {calculateSteps().map((percentage, index) => <CalculatedWeight percentage={percentage} weight={weight} key={`calculated-weight-${index}`} />)}
             </div>
         </main>
     )

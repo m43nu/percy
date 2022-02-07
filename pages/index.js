@@ -62,13 +62,13 @@ export default function Home() {
 
             <div className={styles.grid}>
                 <div className={styles.card}>
-                    <Input id="customPercentage" placeholder="Custom" type="number" width="4rem" inputmode="decimal"
+                    <Input id="customPercentage" bordered placeholder="Custom" type="number" width="6rem" inputmode="decimal" labelRight="%"
                            min={1} max={100} step={1} name="customPercentage" value={customPercentage}
                            onChange={event => setCustomPercentage(event.target.value)}/>
                     <h3>{customPercentage ? roundHalf(weight / 100 * customPercentage) : '-'}</h3>
                 </div>
-                {percentages.map((percentage) => <CalculatedWeight percentage={percentage} weight={weight}
-                                                                   key={percentage}/>)}
+                {percentages.map((percentage, index) => <CalculatedWeight percentage={percentage} weight={weight}
+                                                                   key={`calculated-weight-${index}`}/>)}
             </div>
         </main>
     )

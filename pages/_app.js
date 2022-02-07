@@ -30,16 +30,16 @@ function MyApp({Component, pageProps}) {
                     <meta name="theme-color" content="#ffffff"/>
                 </Head>
                 <Component {...pageProps} />
-                <footer className={styles.footer}>
-                    <a
-                        href="https://sahli-interactive.ch/visitenkarte/emanuel-imhof"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Made by{' '}
-                        Emanuel Imhof
-                    </a>
-                </footer>
+                {/*<footer className={styles.footer}>*/}
+                {/*    <a*/}
+                {/*        href="https://sahli-interactive.ch/visitenkarte/emanuel-imhof"*/}
+                {/*        target="_blank"*/}
+                {/*        rel="noopener noreferrer"*/}
+                {/*    >*/}
+                {/*        Made by{' '}*/}
+                {/*        Emanuel Imhof*/}
+                {/*    </a>*/}
+                {/*</footer>*/}
             </div>
         </NextUIProvider>
     )

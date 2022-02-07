@@ -25,7 +25,7 @@ export default function Home() {
                     percy
                 </Text>
             </h1>
-            <Text css={{marginBottom: '1rem'}}>Percentage Calculator</Text>
+            <Text css={{marginBottom: '1rem'}}>Percentage Calculator - <a href="https://github.com/m43nu/percy" target="_blank">Learn more</a></Text>
             <Grid.Container gap={1} justify="center" css={{paddingTop: 0}}>
                 <Grid>
                     <NextLink href="/">
